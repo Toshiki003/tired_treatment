@@ -1,0 +1,21 @@
+@import "bootstrap";
+@import "home";
+
+.header-titile, .header-titile:visited, .header-titile:hover, .header-titile:active{
+  color: white;
+  text-decoration: none;
+}
+
+.back-link, .back-link:visited, .back-link:hover, .back-link:active{
+  color: black;
+}
+
+.page-link {
+  color: black;
+}
+
+.page-item.active .page-link {
+  color: black;
+  background-color: lightgray;
+  border-color: lightgray;
+}
