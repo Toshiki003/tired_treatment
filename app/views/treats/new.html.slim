@@ -1,5 +1,6 @@
 h1.mt-5 
   | 出来事の入力
+p.text-danger ＊出来事は必須項目です
 
 - if @treat.errors.present?
   ul#error_explanation.text-danger 
@@ -21,5 +22,5 @@ h1.mt-5
     = f.select :reward_category, [ ["ごちそう", "ごちそう"], ["ショッピング", "ショッピング"], ["エンタメ", "エンタメ"] ], { include_blank: false, selected: 1 }, { class: "form-select", id: "treat_tired_level"}
   = f.submit "ご褒美を設定する", class:"btn btn-outline-dark mt-3"
 
-.nav.justify-content-center 
+.nav.justify-content-center
   = link_to "戻る", root_path, class: "nav-link back-link"

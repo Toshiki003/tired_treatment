@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        treat:
+          attributes:
+            event:
+              blank: 出来事を入力してください
+        
+    models:
+      treat: ご褒美
+    attributes:
+      treat:
+        user: お名前
+        event: 出来事
+        tired_level: 疲れ度
+        reward_name: ご褒美
+        reward_category: ご褒美カテゴリー
+        
