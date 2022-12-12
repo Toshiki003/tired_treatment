@@ -112,6 +112,6 @@ class Treat < ApplicationRecord
             }
           }
           #nameカラムにはこの戻り値が入る。だからDBカラムにあってもビューでユーザーからの入力値にreward_nameは必要ない
-          self.reward_name = treat_results.dig(category, tired_level).sample
+          self.reward_name = treat_results.dig(reward_category, tired_level).sample
   end
 end

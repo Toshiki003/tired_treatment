@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'treats/index'
-  get 'treats/new'
-  get 'treats/show'
-  get "/", to: "home#top"
+  root to: "home#top"
+  resources :treats, only: %i[index new create show]
 end
