@@ -1,2 +1,24 @@
-h1 Treats#index
-p Find me in app/views/treats/index.html.slim
+h1.mt-5 みんなの履歴
+
+.mt-3.mb-3 
+  = paginate @treats
+
+table.table.table-hover 
+  thead.thead-default 
+    tr 
+      th= Treat.human_attribute_name(:user)
+      th= Treat.human_attribute_name(:event)
+      th= Treat.human_attribute_name(:tired_level)
+      th= Treat.human_attribute_name(:reward_category)
+      th= Treat.human_attribute_name(:reward_name)
+  tbody 
+    - @treats.each do |treat|
+      tr 
+        td= treat.user 
+        td= treat.event 
+        td= treat.tired_level 
+        td= treat.reward_category 
+        td= treat.reward_name 
+
+.nav.justify-content-center.mb-3 
+  = link_to "戻る", root_path, class: "nav-link back-link"

@@ -10,9 +10,10 @@ html
   body
    .app-title.navbar.navbar-expand-md.navbar-light.bg-dark 
      .navbar-brand 
-       = link_to "癒しタイム", root_path, class: "header-title ms-3"
+      = link_to "癒しタイム", treats_path, class: "header-title ms-3"
+      /ここはtreats_pathじゃなくてroot_pathにする。
   
    .container 
      -if flash.notice.present?
        .aleert.alert-success= flash.notice
-    = yield
+     = yield

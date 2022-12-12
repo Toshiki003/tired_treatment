@@ -1,2 +1,29 @@
-h1 Treats#show
-p Find me in app/views/treats/show.html.slim
+h4.mt-5 
+  = "#{@treat.user}さんへのご褒美は..."
+h1.text-center 
+  = "「#{@treat.reward_name}する」"
+h4.text-end 
+  | です!
+
+table.table.table-hover 
+  tbody 
+    tr 
+      th= Treat.human_attribute_name(:user)
+      td= @treat.user
+    tr 
+      th= Treat.human_attribute_name(:event)
+      td= @treat.event
+    tr 
+      th= Treat.human_attribute_name(:tired_level)
+      td= @treat.tired_level
+    tr 
+      th= Treat.human_attribute_name(:reward_category)
+      td= @treat.reward_category
+    tr 
+      th= Treat.human_attribute_name(:reward_name)
+      td= @treat.reward_name
+
+= link_to "Twitterに投稿する", "http://twitter.com/share?url=#{request.protocol + request.host}/&text=「#{@treat.event}」を達成できたら、#{@treat.reward_name}します！%0a%23癒しタイム%0a", class: "btn btn-outline-primary"
+
+.nav.justify-content-center
+  = link_to "戻る", root_path, class: "nav-link back-link"
