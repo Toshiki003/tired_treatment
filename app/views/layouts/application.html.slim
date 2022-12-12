@@ -8,4 +8,11 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+   .app-title.navbar.navbar-expand-md.navbar-light.bg-dark 
+     .navbar-brand 
+       = link_to "癒しタイム", root_path, class: "header-title ms-3"
+  
+   .container 
+     -if flash.notice.present?
+       .aleert.alert-success= flash.notice
     = yield

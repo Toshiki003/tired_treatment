@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'treats/index'
+  get 'treats/new'
+  get 'treats/show'
+  get "/", to: "home#top"
 end
