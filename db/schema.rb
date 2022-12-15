@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_12_12_064926) do
 
-  create_table "treats", force: :cascade do |t|
+  create_table "treats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "user", limit: 30, null: false
     t.string "event", limit: 30, null: false
     t.integer "tired_level", null: false

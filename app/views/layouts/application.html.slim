@@ -2,17 +2,16 @@ doctype html
 html
   head
     title
-      | Rails5TiredTreatment
+      | TiredTreatment
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-   .app-title.navbar.navbar-expand-md.navbar-light.bg-dark 
+   .app-title.navbar.navbar-expand-md.navbar-light.bg-success 
      .navbar-brand 
-      = link_to "癒しタイム", treats_path, class: "header-title ms-3"
-      /ここはtreats_pathじゃなくてroot_pathにする。
-  
+      = link_to "癒しタイム", root_path, class: "header-title ms-3 text-warning"
+      
    .container 
      -if flash.notice.present?
        .aleert.alert-success= flash.notice

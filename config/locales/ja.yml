@@ -5,15 +5,15 @@ ja:
         treat:
           attributes:
             event:
-              blank: 出来事を入力してください
+              blank: 今日のあれこれを入力してください
         
     models:
-      treat: ご褒美
+      treat: 癒し
     attributes:
       treat:
-        user: お名前
-        event: 出来事
-        tired_level: 疲れ度
-        reward_name: ご褒美
-        reward_category: ご褒美カテゴリー
+        user: ニックネーム
+        event: 今日のあれこれ
+        tired_level: 今の疲れ度
+        reward_name: 癒し
+        reward_category: カテゴリー
         
