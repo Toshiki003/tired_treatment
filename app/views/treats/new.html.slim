@@ -13,14 +13,14 @@ p.text-danger ＊出来事は必須項目です
     = f.text_field :user, class: "form-control", id: "treat_user", maxlength: 30, autocomplete: "off"
   .form-group 
     = f.label :event, class: "mt-2"
-    = f.text_field :event, class: "form-control", id: "treat_event", maxlength: 30, autocomplete: "off"
+    = f.text_field :event, class: "form-control", id: "treat_event",placeholder: "例)音声オンに気づかなくて、会議中お菓子食べてるのバレた。あーあ。", maxlength: 30, autocomplete: "off"
   .form-group 
     = f.label :tired_level, class: "mt-2"
     = f.select :tired_level, [["1", 1], ["2", 2],["3", 3]], { include_blank: false, selected: 1 }, { class: "form-select", id: "treat_tired_level"}
   .form-group 
     = f.label :reward_category, class: "mt-2"
     = f.select :reward_category, [ ["ごちそう", "ごちそう"], ["ショッピング", "ショッピング"], ["エンタメ", "エンタメ"] ], { include_blank: false, selected: 1 }, { class: "form-select", id: "treat_tired_level"}
-  = f.submit "ご褒美を設定する", class:"btn btn-outline-dark mt-3"
+  = f.submit "癒しを設定する", class:"btn btn-outline-dark mt-3"
 
 .nav.justify-content-center
   = link_to "戻る", root_path, class: "nav-link back-link"
