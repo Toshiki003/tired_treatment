@@ -1,4 +1,4 @@
-ARG APP_NAME=tired_treatment
+ARG APP_NAME=rails_5_tired_treatment
 ARG RUBY_IMAGE=ruby:2.5.1
 ARG NODE_VERSION='15'
 ARG BUNDLER_VERSION='2.3.24'
@@ -17,6 +17,13 @@ ENV RAILS_LOG_TO_ STUDOUT true
 
 RUN mkdir /$APP_NAME
 WORKDIR /$APP_NAME
+
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
+&& wget --quiet -O - /tmp/pubkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+&& echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+&& apt-get update -qq \
+&& apt-get install -y build-essential nodejs yarn
+
 
 RUN gem install bundler:$BUNDLER_VERSION
 
